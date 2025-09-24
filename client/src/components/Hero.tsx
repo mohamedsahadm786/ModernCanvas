@@ -84,9 +84,7 @@ export default function Hero() {
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
             data-testid="hero-title"
           >
-            <span className="text-white">SAHAD</span>
-            <br />
-            <span className="text-primary">in a Snapshot</span>
+            <span className="text-white">MOHAMED SAHAD M</span>
           </h1>
           
           <p 
