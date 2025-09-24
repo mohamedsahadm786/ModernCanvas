@@ -60,7 +60,7 @@ export default function WorkGallery() {
                   </CardContent>
                 </Card>
               </DialogTrigger>
-              <DialogContent className="max-w-4xl w-full p-0 bg-transparent border-0">
+              <DialogContent className="max-w-4xl w-full p-0 bg-transparent border-0" aria-describedby="work-gallery-description">
                 <div className="relative">
                   <img
                     src={item.image}
@@ -69,7 +69,7 @@ export default function WorkGallery() {
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-black/80 text-white p-6 rounded-b-lg">
                     <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                    <p className="text-white/90">{item.description}</p>
+                    <p id="work-gallery-description" className="text-white/90">{item.description}</p>
                   </div>
                 </div>
               </DialogContent>

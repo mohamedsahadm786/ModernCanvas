@@ -12,7 +12,15 @@ import {
   Target,
   TrendingUp,
   Lightbulb,
-  GitBranch
+  GitBranch,
+  Languages,
+  FileSpreadsheet,
+  Bot,
+  Network,
+  Calculator,
+  BookOpen,
+  Crown,
+  HandHeart
 } from 'lucide-react';
 
 interface Skill {
@@ -31,6 +39,31 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
+    title: 'Languages',
+    description: 'Languages I speak fluently for global communication',
+    color: 'bg-emerald-50 border-emerald-200',
+    skills: [
+      {
+        name: 'English',
+        proficiency: 95,
+        icon: Languages,
+        description: 'Native-level proficiency in academic and professional settings'
+      },
+      {
+        name: 'Malayalam',
+        proficiency: 100,
+        icon: Languages,
+        description: 'Native language with complete fluency'
+      },
+      {
+        name: 'Hindi',
+        proficiency: 90,
+        icon: Languages,
+        description: 'Fluent in conversation and business communication'
+      }
+    ]
+  },
+  {
     title: 'Tools and Technologies',
     description: 'Technical tools and platforms I use for data science and development',
     color: 'bg-blue-50 border-blue-200',
@@ -48,16 +81,34 @@ const skillCategories: SkillCategory[] = [
         description: 'PostgreSQL, MySQL, database optimization, and complex query writing'
       },
       {
-        name: 'Data Visualization',
+        name: 'Advanced MS Excel',
         proficiency: 88,
-        icon: BarChart3,
-        description: 'Power BI, Tableau, Matplotlib, Seaborn for compelling data stories'
+        icon: FileSpreadsheet,
+        description: 'Advanced formulas, pivot tables, macros, and data analysis tools'
       },
       {
-        name: 'Machine Learning',
+        name: 'Power BI',
+        proficiency: 85,
+        icon: BarChart3,
+        description: 'Business intelligence dashboards and interactive data visualizations'
+      },
+      {
+        name: 'Artificial Intelligence',
         proficiency: 87,
-        icon: Brain,
-        description: 'Scikit-learn, TensorFlow, PyTorch for predictive modeling and AI'
+        icon: Bot,
+        description: 'AI model development, NLP, computer vision, and machine learning'
+      },
+      {
+        name: 'Deep Learning',
+        proficiency: 85,
+        icon: Network,
+        description: 'Neural networks, TensorFlow, PyTorch for complex pattern recognition'
+      },
+      {
+        name: 'SPSS',
+        proficiency: 80,
+        icon: Calculator,
+        description: 'Statistical analysis software for advanced data analytics'
       },
       {
         name: 'Git & Version Control',
@@ -110,22 +161,22 @@ const skillCategories: SkillCategory[] = [
         description: 'Clear presentation of complex data insights to stakeholders'
       },
       {
-        name: 'Team Collaboration',
-        proficiency: 88,
-        icon: Users,
-        description: 'Cross-functional teamwork and agile development practices'
-      },
-      {
-        name: 'Problem Solving',
+        name: 'Data Storytelling',
         proficiency: 90,
-        icon: Lightbulb,
-        description: 'Analytical thinking and creative solution development'
+        icon: BookOpen,
+        description: 'Transforming complex data into compelling narratives and insights'
       },
       {
-        name: 'Project Management',
+        name: 'Leadership',
         proficiency: 85,
-        icon: Target,
-        description: 'End-to-end project delivery and stakeholder management'
+        icon: Crown,
+        description: 'Leading data science projects and mentoring team members'
+      },
+      {
+        name: 'Teamwork',
+        proficiency: 95,
+        icon: HandHeart,
+        description: 'Collaborative approach to cross-functional team projects and initiatives'
       }
     ]
   }

@@ -122,7 +122,7 @@ export default function Certifications() {
                         Preview Certificate
                       </Button>
                     </DialogTrigger>
-                    <DialogContent className="max-w-4xl w-full">
+                    <DialogContent className="max-w-4xl w-full" aria-describedby="certificate-description">
                       <div className="text-center">
                         <img
                           src={cert.image}
@@ -135,7 +135,7 @@ export default function Certifications() {
                         <p className="text-lg text-primary font-semibold mb-2">
                           Issued by {cert.issuer}
                         </p>
-                        <p className="text-muted-foreground">
+                        <p id="certificate-description" className="text-muted-foreground">
                           {cert.description}
                         </p>
                       </div>
