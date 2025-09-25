@@ -1,14 +1,7 @@
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { GraduationCap, FileText } from 'lucide-react';
-import profileImage from '@assets/generated_images/Professional_headshot_portrait_75ab4013.png';
+import profileImage from '@assets/generated_images/About/mine.png';
 
 export default function About() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <section 
       id="about" 
@@ -25,64 +18,15 @@ export default function About() {
           </h2>
         </div>
 
-        {/* Profile Section */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 mb-16">
-          {/* Left Card - Education */}
-          <Card className="w-full max-w-sm hover-elevate transition-transform duration-300 hover:scale-105">
-            <CardContent className="p-6 text-center">
-              <img 
-                src={profileImage} 
-                alt="Education related visual" 
-                className="w-full h-48 object-cover rounded-lg mb-4"
-                loading="lazy"
-              />
-              <p className="font-semibold mb-4 text-sm text-muted-foreground">
-                My EDUCATION 🎓 Oh, it's flex time!
-              </p>
-              <Button 
-                onClick={() => scrollToSection('education')}
-                className="w-full"
-                data-testid="about-education-button"
-              >
-                <GraduationCap className="w-4 h-4 mr-2" />
-                Let's go!
-              </Button>
-            </CardContent>
-          </Card>
-
-          {/* Center - Profile Image */}
-          <div className="flex-shrink-0">
-            <img
-              src={profileImage}
-              alt="SAHAD - Data Scientist profile"
-              className="w-48 h-48 lg:w-56 lg:h-56 rounded-full object-cover border-4 border-card-border shadow-lg"
-              data-testid="about-profile-image"
-              loading="lazy"
-            />
-          </div>
-
-          {/* Right Card - CV */}
-          <Card className="w-full max-w-sm hover-elevate transition-transform duration-300 hover:scale-105">
-            <CardContent className="p-6 text-center">
-              <img 
-                src={profileImage} 
-                alt="CV and resume visual" 
-                className="w-full h-48 object-cover rounded-lg mb-4"
-                loading="lazy"
-              />
-              <p className="font-semibold mb-4 text-sm text-muted-foreground">
-                Let my CV do the talking!
-              </p>
-              <Button 
-                onClick={() => window.open('https://drive.google.com/file/d/1t1SdzVxrDfx0uWxgvOW0mOI9Z8fl-3qi/view?usp=sharing', '_blank')}
-                className="w-full"
-                data-testid="about-cv-button"
-              >
-                <FileText className="w-4 h-4 mr-2" />
-                Let's go!
-              </Button>
-            </CardContent>
-          </Card>
+        {/* Centered Profile Image */}
+        <div className="flex justify-center mb-16">
+          <img
+            src={profileImage}
+            alt="SAHAD - Data Scientist profile"
+            className="w-48 h-48 lg:w-56 lg:h-56 rounded-full object-cover border-4 border-card-border shadow-lg"
+            data-testid="about-profile-image"
+            loading="lazy"
+          />
         </div>
 
         {/* Description */}

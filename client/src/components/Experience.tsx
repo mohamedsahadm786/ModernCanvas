@@ -1,7 +1,12 @@
+// path: src/components/Experience.tsx
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, MapPin, Building } from 'lucide-react';
-import experienceImage from '@assets/generated_images/Modern_tech_office_fa83fbfc.png';
+import In1 from '@assets/generated_images/Internship/4.png';
+import In2 from '@assets/generated_images/Internship/3.jpg';
+import In3 from '@assets/generated_images/Internship/1.jpg';
+import In4 from '@assets/generated_images/Internship/2.jpg';
 
 interface ExperienceItem {
   id: string;
@@ -25,7 +30,7 @@ const experiences: ExperienceItem[] = [
       'Developing and deploying ML pipelines with Python, scikit-learn, TensorFlow, PyTorch, including data preprocessing, feature engineering, model training, evaluation (AUC, SHAP), and optimization for scalability.',
       'Working on full-stack deployment with HTML/CSS/JS, Flask servers, API integration, and applying MLOps practices, version control (Git/GitHub), and cloud readiness for production-grade AI tools.'
     ],
-    image: experienceImage
+    image: In1
   },
   {
     id: 'nevar',
@@ -39,7 +44,7 @@ const experiences: ExperienceItem[] = [
       'Collaborated with cross-functional teams to deliver technical solutions and provided valuable inputs for optimizing data pipelines and business outcomes.',
       'Maintained professionalism, accountability, and high-quality standards throughout the 2-month internship, earning recognition for commitment and performance.'
     ],
-    image: experienceImage
+    image: In2
   },
   {
     id: 'btech',
@@ -52,7 +57,7 @@ const experiences: ExperienceItem[] = [
       'Processed and analyzed datasets with 100,000+ records for preprocessing, training, and performance evaluation.',
       'Enhanced proficiency in TensorFlow and PyTorch by implementing and testing 5+ models.'
     ],
-    image: experienceImage
+    image: In3
   },
   {
     id: 'younity',
@@ -65,7 +70,7 @@ const experiences: ExperienceItem[] = [
       'Contributed insights in 10+ meetings, refining strategic plans.',
       'Assisted in preparing financial forecasts, aiding decision-making with actionable data.'
     ],
-    image: experienceImage
+    image: In4
   }
 ];
 
@@ -87,10 +92,13 @@ export default function Experience() {
         </div>
 
         <div className="space-y-8">
-          {experiences.map((exp, index) => (
+          {experiences.map((exp) => (
             <Card 
               key={exp.id}
-              className="hover-elevate transition-all duration-300 hover:scale-[1.02] overflow-hidden bg-card/80 backdrop-blur-sm"
+              className={
+                // added border + rounded corner for clean black outline
+                "hover-elevate transition-all duration-300 hover:scale-[1.02] overflow-hidden bg-card/80 backdrop-blur-sm border-2 border-black rounded-xl"
+              }
               data-testid={`experience-card-${exp.id}`}
             >
               <CardContent className="p-0">

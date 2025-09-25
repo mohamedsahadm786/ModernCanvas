@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 import heroImage1 from '@assets/generated_images/Data_scientist_hero_workspace_3108f382.png';
-import heroImage2 from '@assets/generated_images/AI_data_visualization_background_02ffc0d4.png';
+import heroImage2 from '@assets/generated_images/home_page.avif';
 
 const heroImages = [
   {
@@ -91,7 +91,7 @@ export default function Hero() {
             className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed"
             data-testid="hero-subtitle"
           >
-            Data Scientist • AI/ML Engineer • Statistician
+            DATA SCIENTIST - AI/ML ENGINEER - STATISTICIAN
             <br />
             Transforming raw data into meaningful insights
           </p>

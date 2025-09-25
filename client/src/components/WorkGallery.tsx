@@ -1,17 +1,33 @@
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { X, ZoomIn } from 'lucide-react';
+import { ZoomIn } from 'lucide-react';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
-import placeholderImage from '@assets/generated_images/AI_data_visualization_background_02ffc0d4.png';
 
-// Mock data for work items - replace with actual project images
-const workItems = Array.from({ length: 12 }, (_, i) => ({
+// Import 12 images
+import W1 from '@assets/generated_images/Work/12.jpg';
+import W2 from '@assets/generated_images/Work/1.png';
+import W3 from '@assets/generated_images/Work/2.jpg';
+import W4 from '@assets/generated_images/Work/3.jpg';
+import W5 from '@assets/generated_images/Work/4.jpg';
+import W6 from '@assets/generated_images/Work/5.jpg';
+import W7 from '@assets/generated_images/Work/11.jpg';
+import W8 from '@assets/generated_images/Work/6.jpg';
+import W9 from '@assets/generated_images/Work/7.png';
+import W10 from '@assets/generated_images/Work/8.jpg';
+import W11 from '@assets/generated_images/Work/9.jpg';
+import W12 from '@assets/generated_images/Work/10.jpg';
+
+// All images in an array
+const images = [W1, W2, W3, W4, W5, W6, W7, W8, W9, W10, W11, W12];
+
+// Work items array (12 projects with different images)
+const workItems = images.map((img, i) => ({
   id: i + 1,
-  title: `Project ${i + 1}`,
-  description: `Data analysis and visualization project showcasing advanced analytics techniques`,
-  image: placeholderImage,
-  alt: `Work project ${i + 1} - Data science and analytics`
+  title: `Go to Project Section to Explore more`,
+  description: `From there, you will get an idea about what is this Project`,
+  image: img,
+  alt: `Work project ${i + 1} - Data science and analytics`,
 }));
 
 export default function WorkGallery() {

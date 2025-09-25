@@ -76,13 +76,13 @@ export default function Contact() {
     {
       name: 'Twitter',
       icon: Twitter,
-      url: '#',
+      url: 'https://x.com/_sahad_m_',
       color: 'hover:text-blue-400'
     },
     {
       name: 'Instagram',
       icon: Instagram,
-      url: '#',
+      url: 'https://www.instagram.com/sha._hd_/?hl=en',
       color: 'hover:text-pink-600'
     }
   ];
@@ -148,7 +148,7 @@ export default function Contact() {
                     className="text-muted-foreground hover:text-primary transition-colors"
                     data-testid="contact-phone"
                   >
-                    Available upon request
+                    +91 7510341129
                   </a>
                 </div>
               </div>
