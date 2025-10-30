@@ -3,14 +3,14 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd client && npm ci --cache .npm --prefer-offline
+        - npm ci --cache .npm --prefer-offline
     build:
       commands:
-        - cd client && npm run build
+        - npm run build
   artifacts:
-    baseDirectory: client/dist
+    baseDirectory: dist
     files:
       - '**/*'
   cache:
     paths:
-      - client/.npm/**/*
+      - .npm/**/*
