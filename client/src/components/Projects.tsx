@@ -18,7 +18,7 @@ import PR12 from '@assets/generated_images/Projects/12.jpg';
 import PR13 from '@assets/generated_images/Projects/13.png';
 import PR14 from '@assets/generated_images/Projects/14.jpeg';
 import PR15 from '@assets/generated_images/Projects/15.webp';
-
+import PR16 from '@assets/generated_images/Projects/16.jpg';
 
 
 interface Project {
@@ -46,6 +46,32 @@ const projects: Project[] = [
     image: PR8,
     githubUrl: "https://github.com/mohamedsahadm786/AI-Powered-Multilingual-Voice-Interview-Simulator",
     technologies: ["AI", "Voice Processing", "Machine Learning", "Interview Coaching", "Multilingual"]
+  },
+  {
+    id: 1,
+    title: " AI Document-Based Question Generator",
+    description: "AI-powered RAG system that ingests PDF/DOCX documents, performs semantic chunking, TF-IDF keyword mining, MiniLM embedding, and FAISS vector retrieval, then uses few-shot LLM prompting to generate difficulty-controlled MCQ/Yes/No/Descriptive/Coding questions with full post-processing (validation, semantic deduplication, quality scoring). Includes a complete web interface (Node.js + Python backend) for document upload, dynamic question generation, and automated answer evaluation.",
+    image: PR16,
+    githubUrl: "https://github.com/mohamedsahadm786/AI-Document-Based-Question-Generator-",
+    technologies: ["LLM Prompt Engineering", 
+"Retrieval-Augmented Generation (RAG)", 
+"Semantic Text Chunking", 
+"FAISS Vector Database", 
+"SentenceTransformers (MiniLM Embeddings)", 
+"TF-IDF Keyword Extraction (Scikit-Learn)", 
+"OpenAI API Integration", 
+"Few-Shot Learning", 
+"Embedding-Based Similarity Search", 
+"Semantic Deduplication", 
+"Difficulty-Controlled Question Generation", 
+"PyMuPDF (PDF Extraction)", 
+"python-docx / docx2txt (Document Parsing)", 
+"Python Backend Architecture", 
+"Node.js Web Server", 
+"Full-Stack AI Integration", 
+"End-to-End Pipeline Orchestration", 
+"LLM-Based Answer Evaluation"
+]
   },
   {
     id: 1,
