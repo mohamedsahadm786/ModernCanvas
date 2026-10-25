@@ -7,24 +7,40 @@ import In1 from '@assets/generated_images/Internship/4.png';
 import In2 from '@assets/generated_images/Internship/3.jpg';
 import In3 from '@assets/generated_images/Internship/1.jpg';
 import In4 from '@assets/generated_images/Internship/2.jpg';
+import In5 from '@assets/generated_images/Internship/5.png';
 
 interface ExperienceItem {
   id: string;
   title: string;
   company: string;
   duration: string;
+  location: string;
   status?: string;
   achievements: string[];
   image: string;
 }
 
 const experiences: ExperienceItem[] = [
-  {
+    {
+    id: 'azure',
+    title: 'AI Infrastructure Applied AI Engineer',
+    company: 'Azure Arc Creative Project Management Co.',
+    duration: 'April 2026 - Present',
+    location: 'Dubai, UAE',
+    status: 'Current Position',
+    achievements: [
+      'Own end-to-end self-hosted GPU inference infrastructure on bare-metal NVIDIA Blackwell servers — CUDA/PyTorch provisioning, per-GPU workload pinning, VRAM admission control with OOM-safe recovery, and a 22-service self-healing process fleet — serving an open-weight multimodal model stack (diffusion image/video, TTS, lip-sync) that replaced third-party APIs at ~$0 marginal cost and ~3.7× faster inference.',
+      'Architected fault-tolerant, multi-tenant orchestration for parallel multi-GPU execution — lock-free distributed job queuing, checkpoint-and-resume, idempotent retries, circuit breakers, and graceful pause/auto-resume — achieving zero lost or duplicated work, linear scaling per added GPU, and strict tenant isolation with row-level security and vault-managed secrets.',
+      'Delivered the applied-ML quality layer — LoRA/PEFT fine-tuning of large image-edit models, teacher–student distillation to internalize a paid API in-house, and LLM-as-a-judge vision QC gates with automated retry loops and human-feedback ratings — alongside full MLOps observability: GPU telemetry, alerting, and structured audit logging.'
+    ],
+    image: In5
+  },
+    {
     id: 'rp2',
     title: 'Data Scientist Intern',
     company: 'RP2 Private Ltd.',
-    duration: 'Present',
-    status: 'Current Position',
+    duration: 'July 2025 - December 2025',
+    location: 'Kochi, India',
     achievements: [
       'Building AI-powered applications using LLMs (OpenAI, HuggingFace Transformers), speech-to-text (Whisper, DeepSpeech), and NLP/NLU frameworks, integrated with Flask, REST APIs, and real-time audio interaction systems.',
       'Developing and deploying ML pipelines with Python, scikit-learn, TensorFlow, PyTorch, including data preprocessing, feature engineering, model training, evaluation (AUC, SHAP), and optimization for scalability.',
@@ -32,11 +48,13 @@ const experiences: ExperienceItem[] = [
     ],
     image: In1
   },
+
   {
     id: 'nevar',
     title: 'Data Analyst Intern',
     company: 'Nevar Systems',
     duration: 'April 2025 - June 2025',
+    location: 'Chennai, India',
     achievements: [
       'Contributed to data-driven decision-making by supporting statistical modeling and exploratory data analysis for ongoing business projects.',
       'Assisted in executing analytical tasks including data cleaning, preprocessing, and generating actionable insights using advanced statistical techniques.',
@@ -51,6 +69,7 @@ const experiences: ExperienceItem[] = [
     title: 'Artificial Intelligence Intern',
     company: 'Btech Walleh',
     duration: 'July 2024 - August 2024',
+    location: 'Remote',
     achievements: [
       'Developed and deployed machine learning models in 2+ AI projects, addressing specific challenges.',
       'Designed AI-driven solutions with cross-functional teams, utilizing NLP and computer vision techniques.',
@@ -64,6 +83,7 @@ const experiences: ExperienceItem[] = [
     title: 'Corporate Development Specialist Intern',
     company: 'Younity.In',
     duration: 'July 2023 - August 2023',
+    location: 'Remote',
     achievements: [
       'Conducted competitive analysis using 10+ industry reports, identifying trends for strategic development.',
       'Developed and implemented 3+ strategic initiatives, enhancing market positioning and revenue.',
@@ -126,9 +146,15 @@ export default function Experience() {
                           {exp.company}
                         </div>
                         
-                        <div className="flex items-center gap-2 text-muted-foreground">
-                          <Calendar className="w-4 h-4" />
-                          <span className="font-medium">{exp.duration}</span>
+                        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-muted-foreground">
+                          <div className="flex items-center gap-2">
+                            <Calendar className="w-4 h-4" />
+                            <span className="font-medium">{exp.duration}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <MapPin className="w-4 h-4" />
+                            <span className="font-medium">{exp.location}</span>
+                          </div>
                         </div>
                       </div>
                     </div>
