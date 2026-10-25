@@ -144,11 +144,11 @@ export default function Contact() {
                 <div>
                   <p className="font-semibold text-foreground">Phone</p>
                   <a 
-                    href="tel:+1234567890"
+                    href="tel:+971509132650"
                     className="text-muted-foreground hover:text-primary transition-colors"
                     data-testid="contact-phone"
                   >
-                    +91 7510341129
+                    +971 50 913 2650
                   </a>
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Location</p>
-                  <p className="text-muted-foreground">India</p>
+                  <p className="text-muted-foreground">Dubai, UAE</p>
                 </div>
               </div>
             </div>
